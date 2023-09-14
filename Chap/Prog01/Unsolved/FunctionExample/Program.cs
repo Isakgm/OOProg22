@@ -15,10 +15,9 @@ double rect2y2 = 5.6;
 double area2 = Math.Abs((rect2x1 - rect2x2) * (rect2y1 - rect2y2));
 Console.WriteLine($"Area of second rectangle is {area2}");
 
-
 double AreaOfRectangle(double x1, double y1, double x2, double y2)
 {
-    // Implement AreaOfRectangle, such that it returns the area
-    // of a rectangle defined by (x1, y1) and (x2, y2)
-    return 0.0;
+    double Area3 = Math.Abs((x1 - x2) * (y1 - y2));
+    return Area3;
 }
+Console.WriteLine($"Area of first rectangle is {AreaOfRectangle(rect1x1, rect1y1, rect1x2, rect1y2)}");
