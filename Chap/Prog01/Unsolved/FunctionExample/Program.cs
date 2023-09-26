@@ -21,3 +21,10 @@ double AreaOfRectangle(double x1, double y1, double x2, double y2)
     return Area3;
 }
 Console.WriteLine($"Area of first rectangle is {AreaOfRectangle(rect1x1, rect1y1, rect1x2, rect1y2)}");
+
+double LengthOfPerimeterPentagon(double x1, double x2)
+{
+    double perimeter = Math.Abs(5*(x1-x2));
+    return perimeter;
+}
+Console.WriteLine($"Perimeter of pentagon {LengthOfPerimeterPentagon(rect1x1, rect1x2)}");
