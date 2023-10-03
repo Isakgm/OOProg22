@@ -5,7 +5,7 @@ double netPriceGame = 100;
 
 int noOfBooksInOrder = 10;
 int noOfDVDsInOrder = 0;
-int noOfGamesInOrder = 9;
+int noOfGamesInOrder = 0;
 
 double totalNetPrice = netPriceBook * noOfBooksInOrder + 
                        netPriceDVD * noOfDVDsInOrder + 
