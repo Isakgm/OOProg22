@@ -65,5 +65,12 @@
     {
         _noOfViews = _noOfViews + 1;
     }
+
+    public override string ToString()
+    {
+        return $"{{{nameof(Title)}={Title}, {nameof(Director)}={Director}, {nameof(Runtime)}={Runtime.ToString()}, {nameof(NoOfViews)}={NoOfViews.ToString()}}}";
+    }
     #endregion
+    
+    
 }
