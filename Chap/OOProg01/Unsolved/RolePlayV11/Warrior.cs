@@ -43,7 +43,7 @@ public class Warrior
     {
         _level = _level + 1;
     }
-   public void HealthDown(int points)
+   public void Damage(int points)
     {
         _health = _health - points;
     }
