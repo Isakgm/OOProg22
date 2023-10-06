@@ -43,9 +43,9 @@ public class Warrior
     {
         _level = _level + 1;
     }
-   public void HealthDown()
+   public void HealthDown(int points)
     {
-        _health = _health - 1;
+        _health = _health - points;
     }
     #endregion
 }
