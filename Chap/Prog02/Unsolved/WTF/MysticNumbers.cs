@@ -2,7 +2,7 @@
 public class MysticNumbers
 {
     #region Methods
-    public int ThreeNumbers(int a, int b, int c)
+    public static int ThreeNumbers(int a, int b, int c)
     {
         int result;
 
@@ -25,5 +25,30 @@ public class MysticNumbers
 
         return result;
     }
-    #endregion
+
+    public static int TwoNumbers(int a, int b)
+    {
+        int result;
+
+        if (b > a)
+        {
+            result = b;
+        }
+        else
+        {
+            result = a;
+        }
+
+        return result;
+        #endregion
+    }
+    public static int FourNumbers(int a, int b, int c, int d)
+    {
+        return TwoNumbers(TwoNumbers(a, b), TwoNumbers(c, d));
+    }
+    public static int ThreeNumbers2(int a, int b, int c)
+    {
+        return TwoNumbers(TwoNumbers(a, b), TwoNumbers(c, b));  
+        
+    }
 }
