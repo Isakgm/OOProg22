@@ -8,7 +8,31 @@ public class Barometer
 
     public string WeatherDescription
     {
-        get { return "All weather is nice!"; }
+       get {
+            if (Pressure < 980)
+            {
+                return "Stormy";
+            }
+            else if (Pressure < 1000)
+            {
+                return "Rainy";
+            }
+            else if (Pressure < 1020)
+            {
+                return "changing";
+            }
+            else if (Pressure < 1040) 
+            {
+                return "fair";
+            }
+            else 
+            {
+                return "very dry";
+            }
+
+                
+           } 
+        
     }
     #endregion
 
@@ -17,5 +41,7 @@ public class Barometer
     {
         Pressure = 1000.0;
     }
-    #endregion
+#endregion
+
+
 }
