@@ -15,7 +15,7 @@ Console.WriteLine("Start of Case 2");
 int c2 = 1;
 while (c2 < 20)
 {
-    // Console.WriteLine(c2); // Uncomment to see result
+    //Console.WriteLine(c2); // Uncomment to see result
     c2 = c2 * 2;
 }
 Console.WriteLine("End of Case 2");
@@ -26,7 +26,7 @@ Console.WriteLine("Start of Case 3");
 int c3 = 15;
 while ((c3 < 20) && (c3 > 10))
 {
-    // Console.WriteLine(c3);  // Uncomment to see result
+     //Console.WriteLine(c3);  // Uncomment to see result
     c3++;
 }
 Console.WriteLine("End of Case 3");
@@ -48,6 +48,12 @@ Console.WriteLine("End of Case 4");
 // Case 5
 // Print out the numbers 3,5,7,9
 Console.WriteLine("Start of Case 5");
+int c5 = 3;
+while (c5 < 10)
+{
+    Console.WriteLine(c5);
+    c5 = c5 + 2;
+}
 
 Console.WriteLine("End of Case 5");
 
@@ -55,6 +61,12 @@ Console.WriteLine("End of Case 5");
 // Case 6
 // Print out the numbers 0,1,3,7,15,31
 Console.WriteLine("Start of Case 6");
+int c6 = 0;
+while (c6 < 32)
+{ 
+    Console.WriteLine(c6);
+    c6 = c6 * 2 + 1;
+}
 
 Console.WriteLine("End of Case 6");
 
@@ -62,6 +74,12 @@ Console.WriteLine("End of Case 6");
 // Case 7
 // Print out the numbers 100,50,25,12,6,3,1
 Console.WriteLine("Start of Case 7");
+int c7 = 100;
+while (c7 > 0)
+{ 
+    Console.WriteLine(c7);
+    c7 = c7 / 2;
+}
 
 Console.WriteLine("End of Case 7");
 
@@ -69,5 +87,14 @@ Console.WriteLine("End of Case 7");
 // Case 8 (DIFFICULT)
 // Print out the numbers 10,9,12,7,14,5,16,3,18,1
 Console.WriteLine("Start of Case 8");
+int c8 = 10;
+int q = 9;
+while (c8 < 19)
+{
+    Console.WriteLine(c8);
+    c8 = c8 + 2;
+    Console.WriteLine(q);
+    q = q - 2;
+}
 
 Console.WriteLine("End of Case 8");
