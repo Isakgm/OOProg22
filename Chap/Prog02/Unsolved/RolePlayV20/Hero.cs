@@ -8,6 +8,8 @@
 public class Hero
 {
     #region Instance fields
+    private int _damageMin;
+    private int _damageMax;
     private int _hitPoints;
     private NumberGenerator _generator;
     private BattleLog _log;
@@ -17,10 +19,13 @@ public class Hero
     /// <summary>
     /// Create a Hero, using references to a random number generator and a battle log
     /// </summary>
-    public Hero(NumberGenerator generator, BattleLog log)
+    public Hero(NumberGenerator generator, BattleLog log, int hitpoints, int damageMin, int damageMax)
     {
         _generator = generator;
         _log = log;
+        _damageMin = damageMin; 
+        _damageMax = damageMax;
+        _hitPoints = hitpoints;
         Reset();
     }
     #endregion
@@ -41,7 +46,7 @@ public class Hero
     /// </summary>
     public void Reset()
     {
-        _hitPoints = 100;
+        
     }
 
     /// <summary>
@@ -50,7 +55,7 @@ public class Hero
     /// </summary>
     public int DealDamage()
     {
-        int damage = _generator.Next(10, 30);
+        int damage = _generator.Next(_damageMin, _damageMax);
         string message = $"Hero dealt {damage} damage!";
         _log.Save(message);
         return damage;
