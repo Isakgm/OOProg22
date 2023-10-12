@@ -2,7 +2,7 @@
 NumberGenerator theNumberGenerator = new NumberGenerator();
 BattleLog theLog = new BattleLog();
 
-Hero theHero = new Hero(theNumberGenerator, theLog, 1000, 1, 2);
+Hero theHero = new Hero(theNumberGenerator, theLog, 90, 10, 25);
 Beast theBeast = new Beast(theNumberGenerator, theLog);
 
 
