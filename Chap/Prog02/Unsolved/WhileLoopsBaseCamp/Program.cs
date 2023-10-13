@@ -92,8 +92,8 @@ int q = 9;
 while (c8 < 19)
 {
     Console.WriteLine(c8);
-    c8 = c8 + 2;
     Console.WriteLine(q);
+    c8 = c8 + 2;
     q = q - 2;
 }
 
