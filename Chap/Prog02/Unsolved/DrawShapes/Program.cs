@@ -61,12 +61,14 @@ Console.WriteLine();
 //
 for (int i = 0; i <= 10; i++)
 {
-    for (int j = 0; j <= 10; j = j*2)
+    
+    for (int j = i; j >= 0; j = j - 1)
     {
         DrawingTool.DrawOneStar();
 
     }
     DrawingTool.StartNewLine();
+    
 }
 
 Console.WriteLine();
@@ -84,3 +86,18 @@ Console.WriteLine();
 // *        *
 
 
+for (int i = 0; i <= 10; i++)
+{
+    DrawingTool.DrawOneStar();
+
+    for (int j = i; j >= 0; j = j - 1)
+    {
+        
+        DrawingTool.DrawOneSpace();
+
+    }
+    
+    DrawingTool.StartNewLine();
+    
+
+}
