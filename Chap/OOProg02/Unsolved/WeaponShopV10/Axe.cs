@@ -12,6 +12,22 @@ public class Axe : Weapon
     public Axe(string description)
         : base(description, InitialAxeMinDamage, InitialAxeMaxDamage)
     {
+    }   
+    public int DamageFromAxe()
+    {
+        int damage = CalculateDamage();
+
+        MinDamage = MinDamage < 3 ? 0 : MinDamage  - 3;
+        MaxDamage = MaxDamage < 3 ? 0 : MaxDamage  -3;
+
+        return damage;
+
+    }
+
+    public void Sharpen()
+    {
+        MinDamage = InitialAxeMinDamage;
+        MaxDamage = InitialAxeMaxDamage;
     }
     #endregion
 }
