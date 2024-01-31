@@ -17,6 +17,11 @@ namespace PizzaProject.Pages.Kunder
 
             Kunder = repo.HentAlleKunder();
         }
+
+        public IActionResult OnPost()
+        {
+           return  RedirectToPage("OpretKunde");
+        }
     
     }
 }
