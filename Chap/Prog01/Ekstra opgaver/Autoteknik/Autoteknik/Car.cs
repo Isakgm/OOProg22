@@ -15,6 +15,14 @@ namespace Autoteknik
         private string _model;
         private int _mileage;
 
+        private Owner _owner;
+
+        public Owner Owner 
+        {
+            get { return _owner; } 
+            set { _owner = value; }
+        }
+
         Dictionary<int, AutoRepair> _katalog;
 
         public Dictionary<int, AutoRepair> Katalog
@@ -76,7 +84,14 @@ namespace Autoteknik
         {
             _katalog = new Dictionary<int, AutoRepair>();
             _id = id;
-            _regNo = regNo;
+            if (regNo.Length == 7)
+            {
+                _regNo = regNo;
+            }
+            else
+            {
+                throw new ArgumentException("Fejl: Registreringsnummeret skal være 7 tegn");
+            }
             _year = year;
             _make = make;
             _model = model;
@@ -88,14 +103,16 @@ namespace Autoteknik
             _katalog.Add(autorepair.Id, autorepair );
         }
 
-        /*public double TotalAutoRepairCost()
+        public double TotalAutoRepairCost()
         {
+            double total = 0;
             foreach (AutoRepair autorepair in _katalog.Values)
             {
-
+                total = total + autorepair.Price;
             }
+            return total;
         }
-       */
+       
         public override string ToString()
         {
             return $"{{{nameof(Katalog)}={Katalog}, {nameof(ID)}={ID.ToString()}, {nameof(RegNo)}={RegNo}, {nameof(Year)}={Year.ToString()}, {nameof(Model)}={Model}, {nameof(Mileage)}={Mileage.ToString()}, {nameof(Make)}={Make}}}";

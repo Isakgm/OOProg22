@@ -11,7 +11,14 @@ namespace Autoteknik
         private int _id;
         private string _description;
         private double _price;
+        private Mechanic _mechanic;
 
+
+        public Mechanic Mechanic
+        {
+            get { return _mechanic; }
+            set { _mechanic = value; }
+        }
 
         public int Id     
         {
@@ -47,7 +54,7 @@ namespace Autoteknik
 
         public override string ToString()
         {
-            return $"{{{nameof(Id)}={Id.ToString()}, {nameof(Description)}={Description}, {nameof(Price)}={Price.ToString()}}}";
+            return $"{{{nameof(Id)}={Id.ToString()}, {nameof(Description)}={Description}, {nameof(Price)}={Price.ToString()} Mechanic={Mechanic}}}";
         }
     }
 }
