@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34322.80
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camel Case", "Camel Case\Camel Case.csproj", "{B06E18C8-0F7F-4B44-B47C-7A06B54EDF13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B06E18C8-0F7F-4B44-B47C-7A06B54EDF13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B06E18C8-0F7F-4B44-B47C-7A06B54EDF13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B06E18C8-0F7F-4B44-B47C-7A06B54EDF13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B06E18C8-0F7F-4B44-B47C-7A06B54EDF13}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D8AFA6FD-1780-4BF0-B94C-29656F06AC9C}
+	EndGlobalSection
+EndGlobal
