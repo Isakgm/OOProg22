@@ -14,7 +14,7 @@ namespace FrugtLib.Model
         public int Weight { get; set; }
         public double Price { get; set; }
 
-        public Frugt()
+        public Frugt():this(0, "", 0, 0)
         {
             
         }
