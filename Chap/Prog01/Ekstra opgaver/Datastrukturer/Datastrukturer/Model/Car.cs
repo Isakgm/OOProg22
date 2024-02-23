@@ -1,4 +1,5 @@
-﻿namespace Datastrukturer.Model
+﻿
+namespace Datastrukturer.Model
 {
     public class Car
     {
@@ -48,5 +49,25 @@
         {
             return $"{{{nameof(Id)}={Id.ToString()}, {nameof(Price)}={Price.ToString()}, {nameof(RegNo)}={RegNo}, {nameof(Color)}={Color}}}";
         }
+
+        //Equals og Hash
+
+        public override bool Equals(object? obj)
+        {
+            return obj is Car car &&
+                   Id == car.Id &&
+                   Price == car.Price &&
+                   RegNo == car.RegNo &&
+                   Color == car.Color;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Id, Price, RegNo, Color);
+        }
+
+        
+
+
     }
 }

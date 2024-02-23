@@ -43,3 +43,22 @@ Console.WriteLine(cars.FindOldestCar());
 Console.WriteLine("---FindNewestCar---");
 cars.FindNewestCar();
 Console.WriteLine(cars.FindNewestCar());
+
+//Equals
+if (car1.Equals(car2))
+{
+    Console.WriteLine("car1 og car2 er ens");
+}
+
+//HashCode
+Console.WriteLine("Hashcodes");
+Console.WriteLine("car1" + car1.GetHashCode());
+Console.WriteLine("car2" + car2.GetHashCode());
+
+
+//delegate og lambda
+//delegate int CalculateType(int x, int y);
+
+//CalculateType Sum;
+
+//Sum = (k, l) => k + l;
