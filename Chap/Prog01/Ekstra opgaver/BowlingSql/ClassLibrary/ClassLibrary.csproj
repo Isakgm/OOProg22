@@ -10,8 +10,4 @@
     <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\BowlingSql\ConsoleApplication.csproj" />
-  </ItemGroup>
-
 </Project>
