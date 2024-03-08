@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication", "BowlingSql\ConsoleApplication.csproj", "{FE1CEE9C-499A-484B-95ED-B0E1A553994D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BowlingSql", "BowlingSql\BowlingSql.csproj", "{FE1CEE9C-499A-484B-95ED-B0E1A553994D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary", "ClassLibrary\ClassLibrary.csproj", "{BF151137-6D9D-4AAF-AAB2-157C1CE45DAD}"
 EndProject
