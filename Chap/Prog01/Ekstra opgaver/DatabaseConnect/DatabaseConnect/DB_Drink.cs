@@ -46,7 +46,7 @@ namespace DatabaseConnect
             return drink;
         }
 
-        private const string insertsql = "insert into Drink values(@name, @alk)";
+        private const string insertSql = "insert into Drink values(@name, @alk)";
 
         public void Add(Drink drink)
         {

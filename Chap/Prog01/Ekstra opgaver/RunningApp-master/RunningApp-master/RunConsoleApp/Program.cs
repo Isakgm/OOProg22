@@ -13,7 +13,7 @@ Console.WriteLine(m2);
 Console.WriteLine(m3);
 
 Console.WriteLine("---> Repository <---");
-MemberRepository repo = new MemberRepository();
+MemberRepositoryDB repo = new MemberRepositoryDB();
 Console.WriteLine("---> Repository ADD <---");
 
 Member member = repo.Add(m1);
