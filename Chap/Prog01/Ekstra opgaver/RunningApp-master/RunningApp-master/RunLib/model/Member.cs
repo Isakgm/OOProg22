@@ -92,10 +92,10 @@ namespace RunLib.model
 			get { return _price; }
 			set 
             { 
-                if (value < 50)
-                {
-                    throw new ArgumentException("Pris skal være over 50 Men var " + value);
-                }
+                //if (value < 50)
+                //{
+                //    throw new ArgumentException("Pris skal være over 50 Men var " + value);
+                //}
                 _price = value; 
             }
 		}
@@ -107,10 +107,10 @@ namespace RunLib.model
         {
         }
 
-        public Member(string name, string mobile, string team, double price): 
-			this(-1, name, mobile, team, price)
-        {
-        }
+   //     public Member(string name, string mobile, string team, double price): 
+			//this(-1, name, mobile, team, price)
+   //     {
+   //     }
 
         public Member(int id, string name, string mobile, string team, double price)
         {
@@ -129,6 +129,45 @@ namespace RunLib.model
         public override string ToString()
         {
             return $"{{{nameof(Id)}={Id}, {nameof(Name)}={Name}, {nameof(Mobile)}={Mobile}, {nameof(Team)}={Team}, {nameof(Price)}={Price}}}";
+        }
+
+        public int CompareTo(Member? other)
+        {
+            if (other is null)
+            {
+                return -1;
+            }
+
+            //if (other.Name == Name)
+            //{
+            //    return 0;
+            //}
+            //else if (other.Name < Name)
+            //{
+            //    return +1;
+            //}
+
+            //return -1;
+
+            return Name.CompareTo(other.Name);
+        }
+
+        public class DrinkSortByIdReverse:IComparer<Member>
+        {
+            public int Compare(Member? x, Member? y)
+            {
+                if (x is null)
+                {
+                    return 1;
+                }
+
+                if (y is null)
+                {
+                    return -1;
+                }
+
+                return y.Id.CompareTo(x.Id);
+            }
         }
     }
 }
