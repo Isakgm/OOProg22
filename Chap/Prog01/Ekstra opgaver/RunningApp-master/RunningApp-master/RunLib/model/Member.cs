@@ -152,7 +152,7 @@ namespace RunLib.model
             return Name.CompareTo(other.Name);
         }
 
-        public class DrinkSortByIdReverse:IComparer<Member>
+        public class MemberSortByIdReverse:IComparer<Member>
         {
             public int Compare(Member? x, Member? y)
             {
