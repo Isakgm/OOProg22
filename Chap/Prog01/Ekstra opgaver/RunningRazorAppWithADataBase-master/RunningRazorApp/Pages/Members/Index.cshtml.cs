@@ -2,12 +2,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RunLib.Model;
 using RunLib.Repository;
+using RunningRazorApp.Pages.Services;
 using static RunLib.Model.Member;
+using static RunLib.Model.User;
 
 namespace RunningRazorApp.Pages.Members
 {
     public class IndexModel : PageModel
     {
+
         // instans af kunde repository
         private IMemberRepository _memberRepo;
 
@@ -19,6 +22,7 @@ namespace RunningRazorApp.Pages.Members
 
         // property til View'et
         public List<Member> Members { get; set; }
+        public User User {  get; set; }
 
         // BindProperty til search funktion
 
@@ -31,12 +35,16 @@ namespace RunningRazorApp.Pages.Members
 
 
         //Hent alle kunder når siden læses
-        public void OnGet()
+        public IActionResult OnGet()
         {
             Members = _memberRepo.GetAll();
+            try { User = SessionHelper.Get<User>(HttpContext);
+              return  Page(); } catch (ArgumentException ne) 
+            {
+               return RedirectToPage("/Logins/Login"); 
+            }
+            
         }
-
-
 
         //Gør at man søger når man trykker på knappen
         public IActionResult OnPostSearch()
