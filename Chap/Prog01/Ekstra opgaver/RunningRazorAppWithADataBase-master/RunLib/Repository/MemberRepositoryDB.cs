@@ -16,7 +16,7 @@ namespace RunLib.Repository
             SqlConnection connection = new SqlConnection(Secrettt.GetConnectionString);
             connection.Open();
 
-            string insertSql = "INSERT INTO Members (Name, Mobile, Team, Price) VALUES (@Name, @Mobile, @Team, @Price)";
+            string insertSql = "INSERT INTO Member (Name, Mobile, Team, Price) VALUES (@Name, @Mobile, @Team, @Price)";
 
             SqlCommand cmd = new SqlCommand(insertSql, connection);
             cmd.Parameters.AddWithValue("@Name", member.Name);
@@ -37,7 +37,7 @@ namespace RunLib.Repository
             SqlConnection connection = new SqlConnection(Secrettt.GetConnectionString);
             connection.Open();
 
-            string deleteSql = "DELETE FROM Members WHERE Id = @Id";
+            string deleteSql = "DELETE FROM Member WHERE Id = @Id";
 
             SqlCommand cmd = new SqlCommand(deleteSql, connection);
             cmd.Parameters.AddWithValue("@Id", id);
@@ -60,7 +60,7 @@ namespace RunLib.Repository
             SqlConnection connection = new SqlConnection(Secrettt.GetConnectionString);
             connection.Open();
 
-            string sql = "SELECT * FROM Members";
+            string sql = "SELECT * FROM Member";
             SqlCommand cmd = new SqlCommand(sql, connection);
 
             SqlDataReader reader = cmd.ExecuteReader();
@@ -98,7 +98,7 @@ namespace RunLib.Repository
             SqlConnection connection = new SqlConnection(Secrettt.GetConnectionString);
             connection.Open();
 
-            string selectSql = "SELECT * FROM Members WHERE Id = @Id";
+            string selectSql = "SELECT * FROM Member WHERE Id = @Id";
 
             SqlCommand cmd = new SqlCommand(selectSql, connection);
             cmd.Parameters.AddWithValue("@Id", id);
@@ -131,7 +131,7 @@ namespace RunLib.Repository
             SqlConnection connection = new SqlConnection(Secrettt.GetConnectionString);
             connection.Open();
 
-            string updateSql = "UPDATE Members SET Name = @Name, Mobile = @Mobile, Team = @Team, Price = @Price WHERE Id = @Id";
+            string updateSql = "UPDATE Member SET Name = @Name, Mobile = @Mobile, Team = @Team, Price = @Price WHERE Id = @Id";
 
             SqlCommand cmd = new SqlCommand(updateSql, connection);
             cmd.Parameters.AddWithValue("@Name", member.Name);
@@ -186,7 +186,7 @@ namespace RunLib.Repository
             SqlConnection connection = new SqlConnection(Secrettt.GetConnectionString);
             connection.Open();
 
-            string sql = "SELECT * FROM Members ORDER BY Name DESC";
+            string sql = "SELECT * FROM Member ORDER BY Name DESC";
             SqlCommand cmd = new SqlCommand(sql, connection);
 
             SqlDataReader reader = cmd.ExecuteReader();
