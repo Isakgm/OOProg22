@@ -35,4 +35,3 @@ namespace DatabaseHotel.Pages.HotelDisplay
         }
     }
 }
-}

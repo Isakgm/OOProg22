@@ -4,6 +4,7 @@ namespace DatabaseHotel.Services
 {
     public interface IHotelDatabase
     {
-        List<Hotel> GetAll(); 
+        List<Hotel> GetAll();
+        List<Room> GetAllRooms();
     }
 }
