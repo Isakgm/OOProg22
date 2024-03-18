@@ -1,0 +1,79 @@
+﻿@page
+@using DatabaseHotel.Model
+@model DatabaseHotel.Pages.HotelDisplay.IndexModel
+@{
+    ViewData["Title"] = "Oversigt af Hoteller";
+}
+<div class="container">
+    <div class="col">
+        <div class="row">
+            <h1 class="jumbotron">Hoteller</h1>
+            
+
+            <p>&nbsp;</p>
+            <div class="col-6">
+                <div class="row">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Hotel_No</th>
+                                <th>Navn</th>
+                                <th>Adresse</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (Hotel h in Model.Hotels)
+                            {
+                                <tr>
+                                    <td>@h.Hotel_No</td>
+                                    <td><strong>@h.Name</strong></td>
+                                    <td>@h.Address</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <p>&nbsp;</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="col">
+        <div class="row">
+            <h1 class="jumbotron">Gennemsnit pris på hotelværelser</h1>
+
+
+            <p>&nbsp;</p>
+            <div class="col-6">
+                <div class="row">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Room_No</th>
+                                <th>Hotel_No</th>
+                                <th>Prices</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (Room r in Model.Rooms)
+                            {
+                                <tr>
+                                    <td>@r.Room_No</td>
+                                    <td><strong>@r.Hotel_No</strong></td>
+                                    <td>@r.Price</td>
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <p>&nbsp;</p>
+        </div>
+    </div>
+</div>
