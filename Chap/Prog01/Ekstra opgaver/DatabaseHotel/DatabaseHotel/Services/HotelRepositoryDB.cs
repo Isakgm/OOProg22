@@ -70,7 +70,7 @@ namespace DatabaseHotel.Services
 
             room.Room_No = reader.GetInt32(0);
             room.Hotel_No = reader.GetInt32(1);
-            room.Price = reader.GetFloat(2);
+            room.Price = reader.IsDBNull(3) ? null : (double?)reader.GetDouble(3);
 
             return room;
         }

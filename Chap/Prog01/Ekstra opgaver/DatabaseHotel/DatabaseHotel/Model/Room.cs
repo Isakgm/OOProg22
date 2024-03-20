@@ -5,14 +5,14 @@
         public int Room_No { get; set; }
         public int Hotel_No { get; set; }
         public string Types { get; set; }
-        public float Price { get; set; }
+        public double? Price { get; set; }
 
         public Room(): this(-1,-1,"",0)
         {
             
         }
 
-        public Room(int room_No, int hotel_No, string types, float price)
+        public Room(int room_No, int hotel_No, string types, double? price)
         {
             Room_No = room_No;
             Hotel_No = hotel_No;

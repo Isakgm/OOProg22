@@ -7,8 +7,6 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddSingleton<IHotelDatabase>(new HotelRepositoryDB());
 
-builder.Services.AddSingleton<IRoomRepository>(new RoomRepositoryDB());
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
