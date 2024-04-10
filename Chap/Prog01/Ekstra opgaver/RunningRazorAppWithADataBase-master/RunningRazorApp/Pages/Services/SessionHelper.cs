@@ -6,7 +6,7 @@ namespace RunningRazorApp.Pages.Services
     {
         public static T Get<T>(HttpContext context)
         {
-            String sessionName = nameof(T);
+            String sessionName = typeof(T).Name;
             String? s = context.Session.GetString(sessionName);
             if (string.IsNullOrWhiteSpace(s))
             {
@@ -17,13 +17,13 @@ namespace RunningRazorApp.Pages.Services
 
         public static void Set<T>(T t, HttpContext context)
         {
-            String sessionName = nameof(T);
+            String sessionName = typeof(T).Name;
             String s = JsonSerializer.Serialize(t); context.Session.SetString(sessionName, s);
         }
 
         public static void Clear<T>(HttpContext context)
         {
-            context.Session.Remove(nameof(T));
+            context.Session.Remove(typeof(T).Name);
         }
     }
 }
