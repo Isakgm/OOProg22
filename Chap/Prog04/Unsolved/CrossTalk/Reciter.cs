@@ -8,13 +8,19 @@ public class Reciter
     /// </summary>
     public static void ReciteAllTheWords()
     {
+        
         List<string> danish = new List<string> { "En", "To", "Tre", "Fire", "Fem", "Seks", "Syv", "Otte" };
         List<string> english = new List<string> { "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight" };
         List<string> german = new List<string> { "Eins", "Zwei", "Drei", "Vier", "Funf", "Sechs", "Sieben", "Acht" };
 
-        Recite(danish);
-        Recite(english);
-        Recite(german);
+        Task taskdansk = Task.Run(() => Recite(danish));
+        Task taskenglish = Task.Run(() => Recite(english));
+        Task taskgerman = Task.Run(() => Recite(german));
+
+
+        //Recite(danish);
+        //Recite(english);
+        //Recite(german);
     }
 
     /// <summary>
@@ -29,4 +35,6 @@ public class Reciter
             Thread.Sleep(_rng.Next(1000) + 50);
         }
     }
+
+    
 }
