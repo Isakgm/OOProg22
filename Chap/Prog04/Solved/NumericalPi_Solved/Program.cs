@@ -10,9 +10,9 @@ PiCalcParallel calculatorParallel = new PiCalcParallel();
 Console.WriteLine("Started");
 watch.Start();
 // double numPi = calculatorOrg.Calculate(100000000);
-// double numPi = calculatorFixed.Calculate(100000000);
+ double numPi = calculatorFixed.Calculate(100000000);
 //double numPi = calculatorList.Calculate(100000000, 8);
-double numPi = calculatorParallel.Calculate(100000000, 8);
+//double numPi = calculatorParallel.Calculate(100000000, 8);
 watch.Stop();
 Console.WriteLine("Done");
 

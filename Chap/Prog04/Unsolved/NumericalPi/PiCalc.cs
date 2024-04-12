@@ -9,8 +9,24 @@ public class PiCalc
     /// <returns>Approximate value of pi</returns>
     public double Calculate(int iterations)
     {
-        int insideUnitCircle = Iterate(iterations);
-        return insideUnitCircle * 4.0 / iterations;
+        int insideUnitCircleA = 0;
+        int insideUnitCircleB = 0;
+        int insideUnitCircleC = 0;
+        int insideUnitCircleD = 0;
+
+        Task t1 = new Task(() => { insideUnitCircleA = Iterate(iterations / 4); });
+        Task t2 = new Task(() => { insideUnitCircleB = Iterate(iterations / 4); });
+        Task t3 = new Task(() => { insideUnitCircleC = Iterate(iterations / 4); });
+        Task t4 = new Task(() => { insideUnitCircleD = Iterate(iterations / 4); });
+
+        t1.Start();
+        t2.Start();
+        t3.Start();
+        t4.Start();
+
+        Task.WaitAll(t1,t2,t3,t4);
+
+        return (insideUnitCircleA + insideUnitCircleB + insideUnitCircleC + insideUnitCircleD) * 4.0 / iterations;
     }
 
     /// <summary>
