@@ -53,7 +53,7 @@ namespace RunningRazorApp.Pages.Members
             if (!ModelState.IsValid)
             {
                 return Page();
-            }
+            }   
             Member NewMember = new Member(NewMemberId, NewMemberName, NewMemberPhoneNumber, NewMemberTeam, NewMemberPrice);
 
             try
